@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+{% include 'includes/navbar.html' %}
 {% if description_zodiac is None %}
 <h2>Неизвестный знак зодиака - {{ sign }}</h2>
 {% else %}
