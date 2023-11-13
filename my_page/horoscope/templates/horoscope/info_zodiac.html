@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Гороскоп для {{ sign|title }}
+{% endblock %}
+
+{% block content %}
+{% if description_zodiac is None %}
+<h2>Неизвестный знак зодиака - {{ sign }}</h2>
+{% else %}
+<h2>{{ description_zodiac|title|safe }}</h2>
+{% endif %}
+{% endblock %}
