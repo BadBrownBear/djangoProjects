@@ -7,14 +7,15 @@
 {% endblock %}
 
 {% block title %}
-Гороскоп для {{ sign|title }}
+Гороскоп для {{ sign_name|title }}
 {% endblock %}
 
 {% block content %}
 {% include 'includes/navbar.html' %}
+<h1>{{ sign_name }}</h1>
 {% if description_zodiac is None %}
 <h2>Неизвестный знак зодиака - {{ sign }}</h2>
 {% else %}
-<h2>{{ description_zodiac|title|safe }}</h2>
+<h2>{{ description_zodiac|safe }}</h2>
 {% endif %}
 {% endblock %}

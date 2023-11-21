@@ -12,9 +12,10 @@
 
 {% block content %}
 {% include 'includes/navbar.html' %}
+<h1>Приложение гороскоп</h1>
 <ul>
   {% for zodiac in zodiacs %}
-    <li><a href="{% url 'horoscope_name' sign_zodiac=zodiac %}">{{ forloop.counter0 }} {{zodiac.title}}</a></li>
+    <li><a href="{% url 'horoscope_name' sign_zodiac=zodiac %}">{{zodiac.title}}</a></li>
   {% endfor %}
 </ul>
 {% include 'includes/navbar.html' %}

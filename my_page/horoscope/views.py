@@ -43,8 +43,9 @@ types_days = [
 
 def get_info_about_sign_zodiac(request, sign_zodiac: str):
     description = zodiac_dict.get(sign_zodiac, None)
+    zodiacs = list(zodiac_dict.keys())
     #if description:
-    return render(request, 'horoscope/info_zodiac.html', context={'description_zodiac': description, 'sign': sign_zodiac})
+    return render(request, 'horoscope/info_zodiac.html', context={'description_zodiac': description, 'sign': sign_zodiac, 'zodiacs': zodiacs, 'sign_name': description.split()[0]})
     #else:
     #    return HttpResponseNotFound(f'Неизвестный знак зодиака - {sign_zodiac}')
 
